@@ -945,10 +945,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2082580110}
         m_TargetAssemblyTypeName: MenuControl, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: SetVolume
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1470,4 +1470,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1539a12ad19020145a42e33d2c92f678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumenSlider: {fileID: 1683613563}
+  slider: {fileID: 1683613563}
+  toggle: {fileID: 1428233144}
+  sliderValue: 0
