@@ -20,19 +20,6 @@ public class MenuControl : MonoBehaviour
     }
 
 
-    void Update()
-    {
-        if (toggle.isOn)
-        {
-            PlayerPrefs.SetInt("IsOn", 1);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("IsOn", 0);
-        }
-    }
-
-
     void Values() 
     {
         slider.value = PlayerPrefs.GetFloat("save", sliderValue);
@@ -44,20 +31,16 @@ public class MenuControl : MonoBehaviour
         PlayerPrefs.SetFloat("save", sliderValue);
     }
 
+    public void ChangeToggle()
+    {
+        PlayerPrefs.SetInt("IsOn", (toggle.isOn ? 1 : 0));
+    }
+
     public void ToggleOn()
     {
-        bool IsOn = false;
-        if(PlayerPrefs.GetInt("IsOn") == 1)
-        {
-            IsOn = true;
-        }
 
-        else
-        {
-            IsOn = false;
-        }
+        toggle.isOn = PlayerPrefs.GetInt("IsOn", 0) == 1;
 
-        toggle.isOn = IsOn;
     }
 
 
